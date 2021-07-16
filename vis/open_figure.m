@@ -79,7 +79,7 @@ set(fig, 'DefaultAxesPosition', [margin(1), margin(2), ...
     1 - 2 * margin(1) + settings.font_size / settings.size(1), ...
     1 - 2 * margin(2) + settings.font_size / settings.size(2)]);
 % Set up font size.
-set(fig, 'DefaultTextFontSize', settings.font_size);
+set(fig, 'DefaultAxesFontSize', settings.font_size);
 % Set up font name
 set(fig, 'DefaultTextFontName', settings.font_name);
 % Set up interpreter
