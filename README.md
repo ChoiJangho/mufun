@@ -34,6 +34,7 @@ p.LineWidth = 1.5; p.Color = palette.blue;
 % No need to set interpreter to latex manually.
 xlabel('$x$');
 ylabel('$\sin(x)$');
+title('$\sin(x)$');
 save_figure('file_name', 'simple', 'file_format', 'png');
 ```
 ![example image](https://github.com/ChoiJangho/mufun/blob/main/examples/simple.png?raw=true)
