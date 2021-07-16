@@ -36,6 +36,7 @@ xlabel('$x$');
 ylabel('$\sin(x)$');
 save_figure('file_name', 'simple', 'file_format', 'png');
 ```
+![example image](https://github.com/ChoiJangho/mufun/blob/main/examples/simple.png?raw=true)
 
 ### Functions
 
