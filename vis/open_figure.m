@@ -3,6 +3,7 @@ function fig = open_figure(varargin)
 %% fig = open_figure('property1',value1,'property2',value2,...)
 % 'name': name of the figure (no need to be specified).
 % 'size': [width height] (Default: [1152 648], Unit: point)
+%       'full': 
 % 'background_color': Default: 'white';
 % 'font_size': Default: 12 (this is used to compute the margin)
 % 'font_name': Default: 'Times New Roman'
@@ -39,6 +40,15 @@ if ~strcmp(settings.interpreter, 'latex') && ...
 end
 if ~isfield(settings, 'margin')
     settings.margin = 'normal';
+end
+
+if ischar(settings.size)
+    if strcmp(settings.size, 'full')
+        set(0, 'units', 'points');
+        screen_size = get(0, 'ScreenSize');
+        settings.size = screen_size(3:4);
+        set(0, 'units', 'pixels');
+    end
 end
 
 if ischar(settings.margin)
