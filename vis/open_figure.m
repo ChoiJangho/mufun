@@ -48,6 +48,11 @@ if ischar(settings.size)
         screen_size = get(0, 'ScreenSize');
         settings.size = screen_size(3:4);
         set(0, 'units', 'pixels');
+    elseif strcmp(settings.size, 'half-full-width')
+        set(0, 'units', 'points');
+        screen_size = get(0, 'ScreenSize');
+        settings.size = [floor(0.5 * screen_size(3)), screen_size(4)];
+        set(0, 'units', 'pixels');        
     end
 end
 
@@ -94,4 +99,7 @@ set(fig, 'DefaultAxesFontSize', settings.font_size);
 set(fig, 'DefaultTextFontName', settings.font_name);
 % Set up interpreter
 set(fig, 'DefaultTextInterpreter', settings.interpreter);
+
+movegui(fig, 'center');
+movegui(fig, 'onscreen');
 

@@ -1,4 +1,5 @@
 function color_map = get_color_map(colors, Ns)
+%% color_map = get_color_map(colors, Ns)
 %% Inputs:  colors: colors used for the color map as (size(Ns)+1)x3 array
 %%          Ns: 1D array of integer, each represents the number of intervals between the each color
 %%              If Ns is given as a single number, it is a total size of interval.
